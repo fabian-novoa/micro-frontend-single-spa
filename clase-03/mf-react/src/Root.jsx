@@ -1,9 +1,21 @@
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+
+import Panel from './components/panel';
+import Clientes from './components/clientes';
+import Busqueda from './components/busqueda';
+
 export default function Root(props){
 
     return (
-        <div>
-            {props.nombre}
-            <h1>Lista de Facturas</h1>
-        </div>
+        <BrowserRouter>
+        <Routes>
+            <Route path= '/crm' element={<Panel/>}>
+            </Route>
+            <Route path= '/crm/clientes' element={<Clientes/>}>
+            </Route>
+            <Route path= '/crm/buscar' element={<Busqueda/>}>
+            </Route>
+        </Routes>
+        </BrowserRouter>
     )
 }
