@@ -1,6 +1,6 @@
 const Panel = ()=>{
     return (
-        <div>
+        <div className="panel-crm">
             <h1>Panel -Component</h1>
         </div>
     )

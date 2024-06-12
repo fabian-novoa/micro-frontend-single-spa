@@ -4,6 +4,7 @@ import Panel from './components/panel';
 import Clientes from './components/clientes';
 import Busqueda from './components/busqueda';
 
+import "./style.css"
 export default function Root(props){
 
     return (
