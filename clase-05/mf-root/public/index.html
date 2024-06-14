@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/amd.js"></script>
+
+        <script type="systemjs-importmap">
+            {
+              "imports": {
+                "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@6.0.0/lib/es5/system/single-spa.min.js",
+                "react": "https://unpkg.com/react@18.2.0/umd/react.production.min.js",
+                "react-dom": "https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js",
+                "app-mf-javascript": "//localhost:9001/main.js",
+                "app-mf-react": "//localhost:9002/main.js",
+                "root-config": "//localhost:9000/main.js"
+              }
+            }
+          </script>
+    </head>
+    <body>
+        <div>
+            <div id="single-spa-application:app-mf-react"></div>
+            <div id="app-mf-javascript"></div>
+        </div>
+
+            <!-- Iniciar carga de la aplicación root-config -->
+    <script>
+        System.import("root-config");
+      </script>
+      
+    </body>
+</html>
